@@ -7,46 +7,46 @@
     <title>Mesto</title>
   </head>
   <body>
-    <div className="page">
-      <header className="header">
+    <div classname="page">
+      <header classname="header">
         <img
-          className="header__logo"
+          classname="header__logo"
           src="<%=require('./images/header/Vector.svg')%>"
           alt="логотип"
         />
       </header>
-      <main className="content">
-        <section className="profile">
-          <div className="profile__overlay-avatar">
-            <button className="profile__edit-avatar" type="button"></button>
-            <img className="profile__avatar" src="#" alt="аватар" />
+      <main classname="content">
+        <section classname="profile">
+          <div classname="profile__overlay-avatar">
+            <button classname="profile__edit-avatar" type="button"></button>
+            <img classname="profile__avatar" src="#" alt="аватар" />
           </div>
-          <div className="profile__info">
-            <div className="profile__data">
-              <h1 className="profile__title">Олег Марков</h1>
-              <button className="profile__edit-button" type="button"></button>
+          <div classname="profile__info">
+            <div classname="profile__data">
+              <h1 classname="profile__title">Олег Марков</h1>
+              <button classname="profile__edit-button" type="button"></button>
             </div>
-            <p className="profile__text">Юный исследователь js</p>
+            <p classname="profile__text">Юный исследователь js</p>
           </div>
-          <button className="profile__add-button" type="button"></button>
+          <button classname="profile__add-button" type="button"></button>
         </section>
-        <section className="elements"></section>
+        <section classname="elements"></section>
       </main>
-      <footer className="footer">
-        <p className="footer__paragraph">© 2023 Mesto Russia</p>
+      <footer classname="footer">
+        <p classname="footer__paragraph">© 2023 Mesto Russia</p>
       </footer>
       <!-- Popup Edit -->
-      <section className="popup popup_edit">
-        <div className="popup__container">
-          <button className="popup__close popup__close_edit" type="button"></button>
-          <h2 className="popup__title">Редактировать профиль</h2>
+      <section classname="popup popup_edit">
+        <div classname="popup__container">
+          <button classname="popup__close popup__close_edit" type="button"></button>
+          <h2 classname="popup__title">Редактировать профиль</h2>
           <form
-            className="popup__content popup__content_tipe_edit"
+            classname="popup__content popup__content_tipe_edit"
             name="form"
             novalidate
           >
             <input
-              className="popup__field popup__field_tipe_name"
+              classname="popup__field popup__field_tipe_name"
               id="name"
               name="name"
               type="text"
@@ -56,9 +56,9 @@
               maxlength="40"
               required
             />
-            <span id="name-error" className="popup__field-error"></span>
+            <span id="name-error" classname="popup__field-error"></span>
             <input
-              className="popup__field popup__field_tipe_job"
+              classname="popup__field popup__field_tipe_job"
               id="about"
               name="about"
               type="text"
@@ -68,9 +68,9 @@
               maxlength="200"
               required
             />
-            <span id="about-error" className="popup__field-error"></span>
+            <span id="about-error" classname="popup__field-error"></span>
             <button
-              className="popup__button-save popup__button-save_change"
+              classname="popup__button-save popup__button-save_change"
               name="button_name_save"
               type="submit"
             >
@@ -80,17 +80,17 @@
         </div>
       </section>
       <!-- Popup Add -->
-      <section className="popup popup_add">
-        <div className="popup__container">
-          <button className="popup__close popup__close_add" type="button"></button>
-          <h2 className="popup__title">Новое место</h2>
+      <section classname="popup popup_add">
+        <div classname="popup__container">
+          <button classname="popup__close popup__close_add" type="button"></button>
+          <h2 classname="popup__title">Новое место</h2>
           <form
-            className="popup__content popup__content_tipe_add"
+            classname="popup__content popup__content_tipe_add"
             name="form"
             novalidate
           >
             <input
-              className="popup__field popup__field_tipe_place"
+              classname="popup__field popup__field_tipe_place"
               id="place"
               name="name"
               type="text"
@@ -100,9 +100,9 @@
               maxlength="30"
               required
             />
-            <span id="place-error" className="popup__field-error"></span>
+            <span id="place-error" classname="popup__field-error"></span>
             <input
-              className="popup__field popup__field_tipe_link"
+              classname="popup__field popup__field_tipe_link"
               id="link"
               name="link"
               type="url"
@@ -110,9 +110,9 @@
               placeholder="Ссылка на картинку"
               required
             />
-            <span id="link-error" className="popup__field-error"></span>
+            <span id="link-error" classname="popup__field-error"></span>
             <button
-              className="popup__button-save popup__button-save_add"
+              classname="popup__button-save popup__button-save_add"
               name="button_name_save"
               type="submit"
             >
@@ -122,27 +122,27 @@
         </div>
       </section>
       <!-- Popup image -->
-      <section className="popup popup_image">
-        <figure className="popup__figure">
+      <section classname="popup popup_image">
+        <figure classname="popup__figure">
           <button
-            className="popup__close popup__close_image"
+            classname="popup__close popup__close_image"
             type="button"
           ></button>
-          <img className="popup__photo" src="#" alt="" />
-          <figcaption className="popup__signature"></figcaption>
+          <img classname="popup__photo" src="#" alt="" />
+          <figcaption classname="popup__signature"></figcaption>
         </figure>
       </section>
       <!-- Popup delete -->
-      <section className="popup popup_delete">
-        <div className="popup__container popup__container_delete">
+      <section classname="popup popup_delete">
+        <div classname="popup__container popup__container_delete">
           <button
-            className="popup__close popup__close_delete"
+            classname="popup__close popup__close_delete"
             type="button"
           ></button>
-          <h2 className="popup__title popup__title_delete">Вы уверены?</h2>
-          <form className="popup__content popup__content_tipe_delete" name="form">
+          <h2 classname="popup__title popup__title_delete">Вы уверены?</h2>
+          <form classname="popup__content popup__content_tipe_delete" name="form">
             <button
-              className="popup__button-save popup__button-save_delete"
+              classname="popup__button-save popup__button-save_delete"
               name="button_name_delete"
               type="submit"
             >
@@ -152,20 +152,20 @@
         </div>
       </section>
       <!-- Popup avatar -->
-      <section className="popup popup_avatar">
-        <div className="popup__container popup__container_avatar">
+      <section classname="popup popup_avatar">
+        <div classname="popup__container popup__container_avatar">
           <button
-            className="popup__close popup__close_avatar"
+            classname="popup__close popup__close_avatar"
             type="button"
           ></button>
-          <h2 className="popup__title">Обновить аватар</h2>
+          <h2 classname="popup__title">Обновить аватар</h2>
           <form
-            className="popup__content popup__content_tipe_avatar"
+            classname="popup__content popup__content_tipe_avatar"
             name="form"
             novalidate
             >
             <input
-              className="popup__field popup__field_tipe_avatar"
+              classname="popup__field popup__field_tipe_avatar"
               id="avatar"
               name="avatar"
               type="url"
@@ -173,9 +173,9 @@
               placeholder="Введите ссылку на фото"
               required
             />
-            <span id="avatar-error" className="popup__field-error"></span>
+            <span id="avatar-error" classname="popup__field-error"></span>
             <button
-              className="popup__button-save popup__button-save_avatar"
+              classname="popup__button-save popup__button-save_avatar"
               name="button_name_save"
               type="submit"
             >
@@ -187,14 +187,14 @@
     </div>
     <!-- Тemplate -->
     <template id="elements-template">
-      <div className="elements__element">
-        <button className="elements__delete" type="button"></button>
-        <img className="elements__mask-group" src="#" alt="картинка" />
-        <div className="elements__signature">
-          <h2 className="elements__title"></h2>
-          <div className="elements__like-group">
-            <button className="elements__group" type="button"></button>
-            <h2 className="elements__counter"></h2>
+      <div classname="elements__element">
+        <button classname="elements__delete" type="button"></button>
+        <img classname="elements__mask-group" src="#" alt="картинка" />
+        <div classname="elements__signature">
+          <h2 classname="elements__title"></h2>
+          <div classname="elements__like-group">
+            <button classname="elements__group" type="button"></button>
+            <h2 classname="elements__counter"></h2>
           </div>
         </div>
       </div>

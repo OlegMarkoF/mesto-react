@@ -1,9 +1,9 @@
 import React from "react";
 
-function Card(props) {
+function Card({card, onCardClick}) {
   
   function handleClick() {
-    props.onCardClick(props.card);
+    onCardClick(card);
   }
 
   return (
@@ -11,15 +11,15 @@ function Card(props) {
       <button className="elements__delete" type="button"/>
       <img
         className="elements__mask-group"
-        src={props.card.link}
-        alt={props.card.name}
+        src={card.link}
+        alt={card.name}
         onClick={handleClick}
       />
       <div className="elements__signature">
-        <h2 className="elements__title">{props.card.name}</h2>
+        <h2 className="elements__title">{card.name}</h2>
         <div className="elements__like-group">
           <button className="elements__group" type="button"/>
-          <h2 className="elements__counter">{props.card.likes}</h2>
+          <h2 className="elements__counter">{card.likes.length}</h2>
         </div>
       </div>
     </div>

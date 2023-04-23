@@ -2,7 +2,7 @@ import React from "react";
 import { api } from "../utils/Api";
 import Card from "./Card";
 
-function Main({ onEditAvatar, onEditProfile, onAddPlace, onCardClick, name }) {
+function Main({ onEditAvatar, onEditProfile, onAddPlace, onCardClick }) {
   const [userName, setUserName] = React.useState();
   const [userDescription, setUserDescription] = React.useState();
   const [userAvatar, setUserAvatar] = React.useState();
@@ -37,7 +37,7 @@ function Main({ onEditAvatar, onEditProfile, onAddPlace, onCardClick, name }) {
             type="button"
             onClick={onEditAvatar}
           />
-          <img className="profile__avatar" src={userAvatar} alt={name} />
+          <img className="profile__avatar" src={userAvatar} alt="аватар" />
         </div>
         <div className="profile__info">
           <div className="profile__data">

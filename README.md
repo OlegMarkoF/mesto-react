@@ -6,4 +6,4 @@
 
 **GitHub**
 
-* [Ссылка на предыдущий проект](https://olegmarkof.github.io/mesto/)
+* [Ссылка на предыдущий проект](http://localhost:3000/)

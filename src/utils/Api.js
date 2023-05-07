@@ -27,13 +27,13 @@ class Api {
     .then(this._sendRequest)
   }
 
-  newUserInfo(newData) {
+  newUserInfo(data) {
     return fetch(this._url + `users/me`, {
       method: "PATCH",
       headers: this._headers,
       body: JSON.stringify({
-        name: newData.name,
-        about: newData.about,
+        name: data.name,
+        about: data.about,
       })
     })
     .then(this._sendRequest)
@@ -59,12 +59,12 @@ class Api {
     .then(this._sendRequest)
   }
 
-  editAvatar(data) {
+  editAvatar({avatar}) {
     return fetch(this._url + `users/me/avatar`, {
       method: "PATCH",
       headers: this._headers,
       body: JSON.stringify({
-        avatar: data.avatar
+        avatar: avatar
       })
     })
     .then(this._sendRequest)

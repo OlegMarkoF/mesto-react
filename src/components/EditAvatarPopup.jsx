@@ -1,7 +1,20 @@
 import React from "react";
 import PopupWithForm from "./PopupWithForm";
 
-function PopupEditAvatar({ isOpen, onClose }) {
+function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
+  const avatarRef = React.useRef('');
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    onUpdateAvatar({
+      avatar: avatarRef.current.value
+    });
+  }
+
+  React.useEffect(() => {
+    avatarRef.current.value = '';
+  }, [isOpen]);
+
   return (
     <PopupWithForm
       name="avatar"
@@ -9,21 +22,20 @@ function PopupEditAvatar({ isOpen, onClose }) {
       buttonText="Сохранить"
       isOpen={isOpen}
       onClose={onClose}
+      onSubmit={handleSubmit}
     >
       <input
-        className="popup__field popup__content_tipe_avatar"
+        className="popup__field popup__field_tipe_avatar"
         id="avatar"
         name="avatar"
         type="url"
-        //value=""
         placeholder="Введите ссылку на фото"
-        minLength="2"
-        maxLength="30"
         required
+        ref={avatarRef}
       />
       <span id="avatar-error" className="popup__field-error"></span>
     </PopupWithForm>
   );
 }
 
-export default PopupEditAvatar;
+export default EditAvatarPopup;

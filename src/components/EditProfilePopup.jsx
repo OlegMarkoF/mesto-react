@@ -5,8 +5,6 @@ import { CurrentUserContext } from "../contexts/CurrentUserContext";
 function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
 
   const currentUser = React.useContext(CurrentUserContext);
-  const nameRef = React.useRef();
-  const aboutRef = React.useRef();
   const [name, setName] = React.useState("Oleg M");
   const [about, setAbout] = React.useState("good people");
 
@@ -39,7 +37,6 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
       onSubmit={handleSubmit}
     >
       <input
-        ref={nameRef}
         className="popup__field popup__field_tipe_name"
         id="name"
         name="name"
@@ -53,7 +50,6 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
       />
       <span id="name-error" className="popup__field-error"></span>
       <input
-        ref={aboutRef}
         className="popup__field popup__field_tipe_job"
         id="about"
         name="about"

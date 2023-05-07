@@ -5,9 +5,6 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
   const [name, setName] = React.useState("");
   const [link, setLink] = React.useState("");
 
-  const nameRef = React.useRef();
-  const linkRef = React.useRef();
-
   React.useEffect(() => {
     setName("");
     setLink("");
@@ -49,7 +46,6 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
         maxLength="30"
         required
         onChange={handleNameChange}
-        ref={nameRef}
       />
       <span id="place-error" className="popup__field-error"></span>
       <input
@@ -61,7 +57,6 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
         placeholder="Ссылка на картинку"
         required
         onChange={handleLinkChange}
-        ref={linkRef}
       />
       <span id="link-error" className="popup__field-error"></span>
     </PopupWithForm>
